@@ -16,4 +16,24 @@ export const Content = styled.div`
       color: ${({ theme }) => theme.colors.blackHover};
     }
   }
+
+  @media (max-width: 1399px) {
+    a {
+      font-size: 27px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    a {
+      font-size: 23px;
+      margin-bottom: 35px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    a {
+      font-size: 21px;
+      margin-bottom: 30px;
+    }
+  }
 `;
