@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
     text-align: center;
     font-size: 20px;
     line-height: 1.5em;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     transition: color 0.5s;
 
     &:hover {
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: 991px) {
     h2 {
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       font-size: 18px;
     }
   }
@@ -49,47 +49,15 @@ export const Details = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 10px;
-
-  p,
-  a {
-    font-size: 15px;
-    line-height: 1.6em;
-  }
+  margin-top: 7px;
 
   p {
-      flex: 1;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    transition: color 0.5s;
-    margin-left: 25px;
-
-    &::before {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 1px;
-      background-color: ${({ theme }) => theme.colors.black};
-      margin-right: 12px;
-      transition: margin-right 0.5s, background-color 0.5s;
+    font-size: 15px;
+    line-height: 1.6em;
+    flex: 1;
+    
+    strong {
+      font-weight: 400;
     }
-
-    &:hover {
-        color: ${({ theme }) => theme.colors.blackHover};
-    }
-
-    &:hover::before {
-      margin-right: 16px;
-      background-color: ${({ theme }) => theme.colors.blackHover};
-    }
-  }
-
-  @media (max-width: 575px) {
-    a {
-        display: none;
-    }   
   }
 `;

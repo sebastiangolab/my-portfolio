@@ -13,11 +13,7 @@ const Project = ({ title, link, image, technologies }) => (
     </Image>
 
     <Details>
-      <p>Technologies: {technologies && technologies.join(', ')}</p>
-
-      <a href={link} target="_blank" rel="noreferrer">
-        Przejdź do strony
-      </a>
+      <p><strong>Details:</strong> {technologies && technologies.join(' | ')}</p>
     </Details>
   </Wrapper>
 );
