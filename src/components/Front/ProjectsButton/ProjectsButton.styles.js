@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll'
 
-export const Wrapper = styled.a`
+export const Wrapper = styled(Link)`
   font-size: 25px;
   display: flex;
   justify-content: flex-start;
@@ -8,8 +9,11 @@ export const Wrapper = styled.a`
   position: absolute;
   left: -95px;
   bottom: 120px;
-  transform: rotate(-90deg);
   transition: bottom 0.5s;
+  animation: showProjectsButton 0.7s ease-in-out 0.6s forwards;
+  opacity: 0;
+  transform: translateY(-15px) rotate(-90deg);
+  cursor: pointer;
 
   &::before {
     content: '';
@@ -22,6 +26,17 @@ export const Wrapper = styled.a`
 
   &:hover {
     bottom: 135px;
+  }
+
+  @keyframes showProjectsButton {
+    from {
+      opacity: 0;
+      transform: translateY(-15px) rotate(-90deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(-90deg);
+    }
   }
 
   @media (max-width: 991px) {

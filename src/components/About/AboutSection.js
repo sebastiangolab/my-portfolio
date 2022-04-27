@@ -3,8 +3,8 @@ import { Content } from './AboutSection.styles';
 import Title from 'components/Global/Title';
 import CenterCotainer from 'components/Global/CenterContainer';
 
-const AboutSection = () => (
-  <SectionContainer isGrey>
+const AboutSection = ({ scrollId }) => (
+  <SectionContainer isGrey scrollId={scrollId}>
     <CenterCotainer>
         <Title isLeft>About me</Title>
         <Content>

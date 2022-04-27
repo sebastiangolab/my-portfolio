@@ -5,7 +5,6 @@ import {
   MobileMenuButton,
   MobileMenuCloseButton,
 } from './Menu.styles';
-import LanguagesSwitch from 'components/Front/LanguagesSwitch/LanguagesSwitch';
 
 const Menu = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -15,16 +14,23 @@ const Menu = () => {
 
   return (
     <>
-      <MobileMenuButton onClick={handleMobileOpen}>
-        Menu
-      </MobileMenuButton>
+      <MobileMenuButton onClick={handleMobileOpen}>Menu</MobileMenuButton>
       <Wrapper isVisible={isMobileOpen}>
-        <MobileMenuCloseButton onClick={handleMobileClose}>X</MobileMenuCloseButton>
-        <MenuLink href="#">Start</MenuLink>
-        <MenuLink href="#">Projects</MenuLink>
-        <MenuLink href="#">About me</MenuLink>
-        <MenuLink href="#">Contact</MenuLink>
-        {/* <LanguagesSwitch /> */}
+        <MobileMenuCloseButton onClick={handleMobileClose}>
+          X
+        </MobileMenuCloseButton>
+
+        <MenuLink to="projects" spy={true} smooth={true} duration={500}>
+          Projects
+        </MenuLink>
+
+        <MenuLink to="about" spy={true} smooth={true} duration={500}>
+          About me
+        </MenuLink>
+
+        <MenuLink to="contact" smooth={true} duration={500}>
+          Contact
+        </MenuLink>
       </Wrapper>
     </>
   );

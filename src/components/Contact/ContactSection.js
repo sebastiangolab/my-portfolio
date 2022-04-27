@@ -5,8 +5,8 @@ import CenterCotainer from 'components/Global/CenterContainer';
 import Socials from 'components/Global/Socials/Socials';
 import Footer from 'components/Contact/Footer/Footer';
 
-const ContactSection = () => (
-  <SectionContainer afterElement={<Footer />}>
+const ContactSection = ({ scrollId }) => (
+  <SectionContainer afterElement={<Footer />} scrollId={scrollId}>
     <CenterCotainer>
       <Title>Contact</Title>
       <Content>

@@ -4,18 +4,31 @@ export const Wrapper = styled.div`
   h2 {
     font-size: 40px;
     font-weight: ${({ theme }) => theme.fontWeights.bold};
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: inline-block;
     padding-left: 4px;
+    animation: slideInFromLeft 4s ease-in-out infinite;
 
-    &::before {
-      content: '';
-      display: block;
-      width: 1px;
-      height: 40px;
-      border-left: 1px solid ${({ theme }) => theme.colors.black};
-      margin-right: 16px;
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-300px);
+        opacity: 0;
+      }
+      10% {
+        transform: translateX(-300px);
+        opacity: 0;
+      }
+      20% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      90% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-300px);
+        opacity: 0;
+      }
     }
   }
 
@@ -53,4 +66,18 @@ export const Wrapper = styled.div`
       }
     }
   }
+`;
+
+export const Line = styled.span`
+  display: inline-block;
+  width: 1px;
+  height: 40px;
+  border-left: 1px solid ${({ theme }) => theme.colors.black};
+  margin-right: 16px;
+`;
+
+export const Slide = styled.div`
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 `;

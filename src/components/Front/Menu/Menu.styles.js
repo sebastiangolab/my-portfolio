@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -24,11 +25,12 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const MenuLink = styled.a`
+export const MenuLink = styled(Link)`
   font-size: 19px;
   font-weight: ${({ theme }) => theme.fontWeights.regular};
   margin-left: 53px;
   position: relative;
+  cursor: pointer;
 
   &::after {
     content: '';

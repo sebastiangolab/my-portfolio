@@ -4,7 +4,7 @@ import { StyledTitle, ProjectsList } from './ProjectsSection.styles';
 import { fetchProjects } from 'helpers/fetchProjects';
 import Project from './Project/Project';
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ scrollId }) => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <SectionContainer>
+    <SectionContainer scrollId={scrollId}>
       <StyledTitle>Projects</StyledTitle>
       <ProjectsList>
         {projects?.map((project, index) => (

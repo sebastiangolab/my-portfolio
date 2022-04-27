@@ -9,10 +9,10 @@ import ContactSection from 'components/Contact/ContactSection';
 const App = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyles />
-    {/* <FrontSection /> */}
-    <ProjectsSection />
-    <AboutSection />
-    <ContactSection />
+    <FrontSection scrollId="start" />
+    <ProjectsSection scrollId="projects" />
+    <AboutSection scrollId="about" />
+    <ContactSection scrollId="contact" />
   </ThemeProvider>
 );
 

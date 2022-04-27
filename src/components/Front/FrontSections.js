@@ -5,12 +5,12 @@ import Intro from 'components/Front/Intro/Intro';
 import Socials from 'components/Global/Socials/Socials';
 import ProjectsButton from 'components/Front/ProjectsButton/ProjectsButton';
 
-const FrontSection = () => (
-  <SectionContainer isGrey>
+const FrontSection = ({ scrollId }) => (
+  <SectionContainer isGrey scrollId={scrollId}>
     <Header />
     <FrontContainer>
       <Intro />
-      <Socials />
+      <Socials isAnimate />
     </FrontContainer>
     <ProjectsButton />
   </SectionContainer>

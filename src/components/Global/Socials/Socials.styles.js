@@ -5,6 +5,21 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-end;
   margin-right: ${({ isContact }) => (isContact ? '0 !important' : '80px')};
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: ${({ isAnimate }) =>
+    isAnimate ? 'showElement 0.7s ease-in-out 0.5s forwards' : 'none'};
+
+  @keyframes showElement {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   & > div {
     display: flex;
